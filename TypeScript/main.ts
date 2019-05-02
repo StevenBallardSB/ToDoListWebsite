@@ -1,4 +1,6 @@
-
+/**
+ * Represents a single task in a ToDo list
+ */
 class ToDoItem{
     title:string;
     description:string;
