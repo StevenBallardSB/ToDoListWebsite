@@ -26,11 +26,31 @@
         <br>
 
         <label for="start-date">Start Date: </label>
-        <input type="date">
+        <input id="start-date" class="due-date" type="text">
         <span></span>
-        <script>
-            const picker = datepicker(".due-date");
-        </script>
+        <br>
+
+        <label for="end-date">End Date: </label>
+        <input id="end-date" class="due-date" type="text">
+        <span></span>
+        <br>
+
+        <label for="is-complete">Is Complete?</label>
+        <input type="checkbox" id="is-complete">
+        <br>
+        <label>Choose an urgency:</label>
+        <select>
+            <option value="L">Low</option>
+            <option value="M">Medium</option>
+            <option value="H">High</option>
+        </select>
+        <br>
+
+        <button type="button">Add ToDo Item</button>
+
     </div>
+    <script>
+        const picker = datepicker(".due-date");
+    </script>
 </body>
 </html>
