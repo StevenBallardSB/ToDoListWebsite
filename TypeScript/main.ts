@@ -38,10 +38,34 @@ function processNewItem(){
     clearForm();
 }
 
+function clearForm(){
+
+    //We could alternatively, wrap all inputs in a <form> tag.
+    let textElements = document.querySelectorAll("input[type=text], textarea")
+    for(let i = 0; i < textElements.length; i++){
+        (<HTMLInputElement> textElements[i]).value = "";
+    }
+
+    let isCompleteBox = <HTMLInputElement>document.querySelector("#is-complete");
+    isCompleteBox.checked = false;
+
+    let urgencyList = <HTMLSelectElement>document.querySelector("#urgency");
+    urgencyList.selectedIndex = 0;
+}
+
+function notifyUser(){
+    alert("Your item was saved");
+}
+
 function saveItem(item:ToDoItem):void{
+
+    let data:string = JSON.stringify(item);
+    console.log("Converting todoitem into JSON string...");
+    console.log(data);
+
     //ensure user can use localStorage
     if(typeof(Storage) != "undefined"){
-        localStorage.setItem("todo", item.title);
+        localStorage.setItem("todo", data);
     }
 }
 
