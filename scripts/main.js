@@ -20,6 +20,22 @@ function processNewItem() {
     saveItem(item);
     notifyUser();
     clearForm();
+    displayToDo(item);
+}
+function displayToDo(item) {
+    var todoList = document.getElementById("todo-list");
+    var itemPar = document.createElement("p");
+    itemPar.innerText = item.title;
+    itemPar.setAttribute("data-description", item.description);
+    itemPar.onclick = toggleItemComplete;
+    todoList.appendChild(itemPar);
+}
+function toggleItemComplete() {
+    var currItem = this;
+    currItem.classList.toggle("completed");
+    var title = currItem.innerText;
+    var description = currItem.getAttribute("data-description");
+    alert("You completed " + title + ":" + description);
 }
 function clearForm() {
     var textElements = document.querySelectorAll("input[type=text], textarea");
