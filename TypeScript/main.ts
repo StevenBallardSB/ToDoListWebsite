@@ -67,7 +67,9 @@ function toggleItemComplete(){
     currItem.classList.toggle("completed");
     let title = currItem.innerText;
     let description = currItem.getAttribute("data-description");
-    alert("You completed " + title + ":" + description);
+    alert("You changed the completion status of " + title + ":" + description);
+
+    
 }
 
 function clearForm(){

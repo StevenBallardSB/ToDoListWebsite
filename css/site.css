@@ -12,3 +12,38 @@ p.completed{
     text-decoration: line-through;
     background-color: lightgreen !important;
 }
+
+header{
+    background-color: blue;
+    border: solid 1px gold;
+}
+
+header > h1{
+    margin-top: 0%;
+    text-align: center;
+    padding-top: 1.5%;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+div#create-item{
+    margin-left: 35%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border: solid 1px goldenrod;
+    width: 30%;
+    text-align: center;
+    background-color: darkblue;
+}
+
+label{
+    display: block;
+    padding-top: 1%; 
+}
+
+button{
+    margin-top: 3%;
+}

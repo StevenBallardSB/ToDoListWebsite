@@ -17,11 +17,11 @@
     </header>
     <div id="create-item">
         <label for="title">Title: </label>
-        <Input id="title" type="text">
+        <Input id="title" class="input" type="text">
         <span>*</span>
         <br>
-        <label for="description">Description: </label>
-        <textarea id="description" rows="8" cols="25"></textarea>
+        <label id="textarea" for="description">Description: </label>
+        <textarea id="description" class="input" rows="8" cols="25"></textarea>
         <span></span>
         <br>
 
@@ -36,22 +36,24 @@
         <br>
 
         <label for="is-complete">Is Complete?</label>
-        <input type="checkbox" id="is-complete">
+        <input type="checkbox" class="input" id="is-complete">
         <br>
         <label>Choose an urgency:</label>
-        <select id="urgency">
+        <select id="urgency" class="input">
             <option value="L">Low</option>
             <option value="M">Medium</option>
             <option value="H">High</option>
         </select>
         <br>
 
-        <button type="button">Add ToDo Item</button>
+        <button type="button" class="input">Add ToDo Item</button>
+
+        <div id="read-item">
+            <button type="button" class="input">Read Item</button>
+        </div>
 
     </div>
-    <div id="read-item">
-        <button type="button">Read Item</button>
-    </div>
+
 
     <div id="todo-list"></div>
     <script>
